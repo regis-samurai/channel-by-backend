@@ -15,6 +15,10 @@ class Api::V1::UsersController < ApiController
     end
   end
 
+  def current
+    render json: current_user.to_json
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
