@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :user_channels
   has_many :channels, :through => :user_channels
+  has_many :messages, :dependent => :destroy
 
   validates_length_of :password, maximum: 72, minimum: 6, allow_nil: false, allow_blank: false
   validates_presence_of :email

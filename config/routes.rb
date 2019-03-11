@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get 'users/current' => 'users#current'
       resources :users
       resources :channels
+      resources :messages
     end
   end
   post 'user_token' => 'user_token#create'

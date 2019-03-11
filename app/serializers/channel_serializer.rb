@@ -3,4 +3,6 @@ class ChannelSerializer < ApplicationSerializer
              :name,
              :slug,
              :url
+
+  has_many :messages
 end
